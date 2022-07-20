@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
-
+import { StyledNavBar, StyledNavTitle, StyledNavList, StyledLink } from "../styled-components/StyledNavBar";
 function NavBar() {
     return(
-        <nav>
-            <div>
-                <Link to="/">Typing Game!</Link>
-            </div>
+        <StyledNavBar>
+            <StyledNavTitle>
+                <Link to="/">Typing Game React Project</Link>
+            </StyledNavTitle>
 
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/highScores">HighScores</Link></li>
-            </ul>
-        </nav>
+            <StyledNavList>
+                <li><StyledLink to="/">Home</StyledLink></li>
+                <li><StyledLink to="/highScores">High-Scores</StyledLink></li>
+            </StyledNavList>
+        </StyledNavBar>
     );
 }
 
